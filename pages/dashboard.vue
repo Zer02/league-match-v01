@@ -22,7 +22,7 @@
       <div v-if="availableMatches.length">
         <div v-for="match in availableMatches" :key="match.id" class="match-card">
           <p>Match #{{ match.id.slice(0, 6) }}</p>
-          <button @click="acceptMatch(match.id)" class="accept-btn">
+          <button class="accept-btn" @click="acceptMatch(match.id)">
             Accept Match
           </button>
         </div>
