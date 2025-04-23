@@ -1,5 +1,8 @@
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/supabase'],
+  modules: [
+    '@nuxtjs/supabase',
+    '@nuxtjs/leaflet'
+  ],
 
   // We handle redirects ourselves
   supabase: { redirect: false },
