@@ -5,18 +5,31 @@
 <script setup>
 const supabase = useSupabaseClient()
 const user = useSupabaseUser()
+const router = useRouter()
 
-// Auto-refresh auth state
-supabase.auth.onAuthStateChange((event, session) => {
+// Handle auth redirects
+watchEffect(() => {
   if (user.value) {
-    console.log('Logged in as:', user.value.email)
-    navigateTo('/dashboard') // Create this simple page
-  }
-  if (event === 'SIGNED_IN') {
-    navigateTo('/dashboard')
-  } else if (event === 'TOKEN_REFRESHED') {  // Handles expired/used links
-    if (session) navigateTo('/dashboard')
+    // Check if profile exists
+    supabase.from('profiles')
+      .select('username')
+      .eq('user_id', user.value.id)
+      .single()
+      .then(({ data }) => {
+        if (!data?.username) {
+          router.push('/setup-profile')
+        } else {
+          if (router.currentRoute.value.path === '/') {
+            router.push('/')
+          }
+        }
+      })
+  } else {
+    // Allow these routes without redirect
+    const publicRoutes = ['/', '/login', '/signup']
+    if (!publicRoutes.includes(router.currentRoute.value.path)) {
+      router.push('/')
+    }
   }
 })
-
 </script>

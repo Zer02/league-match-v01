@@ -68,18 +68,22 @@
 ---
 
 ## 🧱 Execution Roadmap
+- [x] **MVP v.0.1:** Basic matchmaking, profile creation  
 
-- [x] **MVP:** Basic matchmaking, profile creation  
-- [ ] **Phase 1:**
+- [ ] **v.0.1.1**
+  - [ ] NYC court map leaderboard
+  - [ ] Localized player search  I
+
+- [ ] **v.0.1.2**
   - [ ] SPIN rating engine  
-  - [ ] Localized player search  
-- [ ] **Phase 2:**
   - [ ] League/tournament engine  
-  - [ ] Video highlight API (auto-cut based on scoring events)  
-- [ ] **Phase 3:**
-  - [ ] React Native mobile apps  
-  - [ ] Sponsorship & event dashboard  
-- [ ] **Endgame:**
+
+- [ ] **v.0.1.3**
+  - [ ] Improved UI dashboard
+  - [ ] Pokemon Go-like map on mobile app
+
+- [ ] **ENDGAME v.3.0**
+  - [ ] Sponsorship & event dashboard
   - [ ] LeagueMatch DAO & Web3 identity layer  
   - [ ] RICO-compliant equity sponsorships for small businesses  
   - [ ] NFT player contracts (earn from matches, support local pros)  
@@ -95,7 +99,7 @@
 
 
 
-<!-- # LeagueMatch v.0.1
+<!-- # LeagueMatch 
 
 Long-term vision for LeagueMatch – a competitive tennis matchmaking platform with social and ranking elements.
 
