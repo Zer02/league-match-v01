@@ -1,4 +1,4 @@
-# LeagueMatch v.0.2
+# LeagueMatch v.0.1
 
 **A competitive tennis matchmaking platform rekindling the thrill of 1v1 rivalry – powered by social, seasonal, and skill-based gameplay.**  
 *Built with Nuxt & Supabase (Web2 now, Web3 ready later).*
